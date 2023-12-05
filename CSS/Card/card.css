@@ -1,0 +1,46 @@
+body {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  text-align: start;
+  display: block;
+  width: 300px;
+  height: auto;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+.header {
+  border: 1px solid black;
+}
+
+.first-item {
+  border: 1px solid black;
+}
+
+.second-item {
+  border: 1px solid black;
+}
+
+.third-item {
+  border: 1px solid black;
+}
+
+.footer {
+  border: 1px solid black;
+}
+
+h3,
+p,
+a {
+  margin-left: 25px;
+}
+
+a {
+  color: blue;
+}

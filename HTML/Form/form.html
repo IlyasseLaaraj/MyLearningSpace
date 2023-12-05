@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Form Lesson</title>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="Email">E-mail:</label>
+        <input type="email" name="Email" placeholder="example@example.com" required>
+        <br>
+        <label for="Password">Password:</label>
+        <input type="password" name="Password" re>
+        <br>
+        <label for="Name_and_Lastname">Name and Lastname:</label>
+        <input type="text" name="Name_and_Lastname" pl>
+        <br>
+        <label for="Date_of_Birth">Date of birth:</label>
+        <input type="date" name="Date_of_Birth">
+        <br>
+        <label for="Telephone_Number">Telephone number:</label>
+        <input type="text" name="Telephone_Number">
+        <br>
+        <fieldset style="width: 18%;">
+            <legend>Chose your experience Plan</legend>
+            <label for="Free">Free Plan</label>
+            <input type="radio" id="Free" name="plan" value="Free plan">
+            <label for="Standard">Standard Plan(25£)</label>
+            <input type="radio" id="Standard" name="plan" value="Standard plan">
+            <label for="Premium">Premium Plan(50£)</label>
+            <input type="radio" id="Premium" name="plan" value="Premium plan">
+            <label for="VIP">VIP Plan(75£)</label>
+            <input type="radio" id="VIP" name="plan" value="VIP plan">
+            <br>
+            <hr>
+            <label for="Pro_plan">PRO Plan(100£)</label>
+            <input type="checkbox" name="Pro_plan">
+        </fieldset>
+        <br>
+        <label for="Credit_Card_Number">Credit card number:</label>
+        <input type="text" name="Credit_Card_Number" minlength="15" maxlength="19">
+        <br>
+        <label for="CVC">CVC:</label>
+        <input type="text" name="CVC" maxlength="3" minlength="3">
+        <br>
+        <label for="Expiration_Date">Expiration date:</label>
+        <input type="date" name="Expiration_Date">
+        <br>
+        <label for="Billing_Adress">Billing Address:</label>
+        <input type="text" name="Billing_Adress">
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

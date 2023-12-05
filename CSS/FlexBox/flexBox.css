@@ -1,0 +1,30 @@
+section {
+  width: 200px;
+  height: 100vh;
+  background-color: hotpink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  background-color: antiquewhite;
+  border: 2px solid gray;
+}
+
+a {
+  color: #2b2b2b;
+  flex: 1;
+}
+
+a:hover {
+  color: #2b2bb2;
+  transition: 0.3s;
+}
+
+img {
+  border: solid;
+  border-radius: 60px;
+}
