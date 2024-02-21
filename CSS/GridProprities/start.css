@@ -1,0 +1,29 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-template-areas:
+    "greenbox greenbox greenbox"
+    "yellowbox redbox bluebox"
+    "orangebox orangebox bluebox";
+}
+
+#green {
+  grid-area: greenbox;
+}
+
+#yellow {
+  grid-area: yellowbox;
+}
+
+#red {
+  grid-area: redbox;
+}
+
+#blue {
+  grid-area: bluebox;
+}
+
+#orange {
+  grid-area: orangebox;
+}

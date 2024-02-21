@@ -1,0 +1,38 @@
+section {
+  border: 1px solid;
+  border: 3px solid black;
+  height: auto;
+  width: 250px;
+}
+
+div {
+  border: 1px solid black;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.screen {
+  background-color: rgb(139, 136, 136);
+  grid-column: span 4;
+}
+
+.symbol {
+  background-color: rgba(162, 189, 240, 0.998);
+}
+
+.number {
+  background-color: azure;
+}
+
+.equal {
+  background-color: rgb(220, 85, 163);
+  grid-row: span 4;
+}

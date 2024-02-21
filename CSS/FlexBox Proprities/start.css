@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  min-width: 100vw;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+#yellow {
+  order: -9;
+  justify-content: space-evenly;
+}
+
+#red {
+  order: -8;
+  justify-content: space-evenly;
+}
+
+#green {
+  flex-shrink: 1;
+}
+
+#orange {
+  flex-grow: 3;
+}
+
+#blue {
+  flex-shrink: 1;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <link rel="stylesheet" href="./nav.css">
+</head>
+
+<body>
+    <header></header>
+    <nav class="navbar">
+        <!--LEFT  SIDE-->
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="navbar__left">
+            <div class="navbar__logo">
+                <h3>Navbar</h3>
+            </div>
+            <div class="navbar__home">
+                <a href="#">Home</a>
+            </div>
+            <div class="navbar__link">
+                <a href="#">Link</a>
+            </div>
+            <div class="navbar__dropdown">
+                <select name="dropdown" id="dropdown">
+                    <option value="">Dropdown</option>
+                </select>
+            </div>
+            <div class="navbar__disabled__button">
+                <button type="button" disabled>Disabled</button>
+            </div>
+        </div>
+        <!--RIGHT  SIDE-->
+        <div class="navbar__right">
+            <div class="navbar__placeholder">
+                <input id="searchbar" type="text" placeholder="Search">
+                <button class="navbar__searchbutton" id="searchbutton">Search</button>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
