@@ -1,3 +1,4 @@
+//per esercizio 12 "CRUD with dummy database" guarda il commit precedente
 require("dotenv").config();
 const express = require("express");
 const helmet = require("helmet");
