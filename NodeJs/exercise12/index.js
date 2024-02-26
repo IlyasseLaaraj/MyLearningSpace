@@ -3,6 +3,7 @@ const express = require("express");
 const helmet = require("helmet");
 const cors = require("cors");
 const fs = require("fs");
+const Joi = require("joi");
 
 const app = express();
 
@@ -16,13 +17,13 @@ const dataPath = "./data.json";
 
 let jsonData;
 
-try {
-  const data = fs.readFileSync(dataPath, "utf-8");
-  jsonData = JSON.parse(data);
-  console.log("Data from data.json", jsonData);
-} catch (err) {
-  console.error("Error reading or parsing data file", err);
-}
+const planetSchema = Joi.object({
+  id: Joi.number().integer().required(),
+  name: Joi.string().required(),
+});
+
+const data = fs.readFileSync(dataPath, "utf-8");
+jsonData = JSON.parse(data);
 
 app.get("/api/planets", (_, res) => {
   if (jsonData) {
@@ -47,6 +48,11 @@ app.post("/api/planets", (req, res) => {
     name,
     id,
   };
+
+  const validatedNewPlanet = planetSchema.validate(newPlanet);
+  if (validatedNewPlanet.error) {
+    return res.status(400).json({ msg: validatedNewPlanet.error });
+  }
 
   jsonData.planets.push(newPlanet);
 
