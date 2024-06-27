@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hbm2ddl.auto">create</property>
+		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+		<property name="connection.username">ORACLETESTER</property>
+		<property name="connection.password">oraclestage</property>
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.show_sql">true</property>
+
+		<mapping class="com.advancia.models.kebabComponents.Allergen" />
+		<mapping class="com.advancia.models.kebabComponents.Base" />
+		<mapping class="com.advancia.models.kebabComponents.Ingredient" />
+		<mapping class="com.advancia.models.kebabComponents.Meat" />
+		<mapping class="com.advancia.models.kebabComponents.Sauce" />
+		<mapping class="com.advancia.models.User" />
+		<mapping class="com.advancia.models.Kebab" />
+	</session-factory>
+</hibernate-configuration>
