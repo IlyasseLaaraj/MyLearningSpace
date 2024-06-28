@@ -1,3 +1,4 @@
+package OverrideEquals;
 import java.util.Objects;
 
 public class Classe2 {
