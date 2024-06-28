@@ -88,7 +88,6 @@ SECTION : Java Base.
 								* Stessa firma: Il metodo nella sottoclasse deve avere la stessa firma (nome, tipo di ritorno e parametri) del metodo nella superclasse.
 								* Accessibilità: Il metodo sovrascritto nella sottoclasse deve avere lo stesso livello di accesso o più permissivo rispetto al metodo nella superclasse.
 								* Annotazione @Override: È buona pratica usare l'annotazione @Override per indicare che un metodo sta sovrascrivendo un metodo della superclasse.
-
 					_ Overload dei Metodi
 						-- L'overload (sovraccarico) dei metodi permette a una classe di avere più metodi con lo stesso nome ma con parametri diversi. I metodi sovraccaricati devono differire per il numero o il tipo dei parametri.
 							__ Caratteristiche dell'Overload:
@@ -103,7 +102,6 @@ SECTION : Java Base.
 					+ Accesso Controllato: L'accesso agli attributi privati avviene tramite metodi pubblici getter e setter.
 					+ Modularità: Le classi possono essere modificate internamente senza influenzare il codice esterno che le utilizza.
 					+ Sicurezza: Controllando l'accesso ai dati, si evita che i valori degli attributi vengano modificati in modi non desiderati.
-			
 			Un JavaBean è una classe Java che segue specifiche convenzioni di scrittura che permettono di creare oggetti riutilizzabili e interoperabili. I JavaBean sono ampiamente utilizzati nelle applicazioni Java, in particolare nelle applicazioni Java EE e nelle librerie di componenti come JavaServer Pages (JSP) e JavaServer Faces (JSF).
 				Caratteristiche Strutturali di un JavaBean
 					+ Costruttore senza Argomenti: Un JavaBean deve avere un costruttore pubblico senza argomenti.
@@ -116,13 +114,11 @@ SECTION : Java Base.
 					. public
 						- Accessibile da: Tutti i pacchetti.
 						- Ereditato dalle sottoclassi: Sì.
-						- Utilizzo: Quando si desidera che il membro sia accessibile globalmente da qualsiasi punto del codice.
-						
+						- Utilizzo: Quando si desidera che il membro sia accessibile globalmente da qualsiasi punto del codice.	
 					. private
 						- Accessibile da: Solo dalla stessa classe.
 						- Ereditato dalle sottoclassi: No.
-						- Utilizzo: Per nascondere l'implementazione interna di una classe e garantire l'incapsulamento.
-						
+						- Utilizzo: Per nascondere l'implementazione interna di una classe e garantire l'incapsulamento.					
 					. protected
 						- Accessibile da: La stessa classe, le sottoclassi (anche se si trovano in un pacchetto diverso) e tutte le classi dello stesso pacchetto.
 						- Ereditato dalle sottoclassi: Sì.
@@ -139,6 +135,44 @@ SECTION : Java Base.
 						- Nessun modificatore (default): Accessibile solo al pacchetto.
 						
 [] Q10. Classi Astratte e Interfacce, pecuiliarità e differenze
+			Entrambi vengono utilizzati per definire contratti che altre classi possono implementare, ma hanno caratteristiche e scopi differenti. Ecco un confronto dettagliato delle peculiarità e differenze:
+				Classi Astratte
+					Peculiarità:
+						- Ereditarietà Singola: Una classe può estendere solo una classe astratta.
+						- Metodi con Implementazione: Può contenere metodi concreti (con corpo) oltre ai metodi astratti (senza corpo).
+						- Costruttori: Può avere costruttori, ma non possono essere utilizzati per creare istanze della classe astratta stessa.
+						- Stati (Attributi): Può avere variabili di istanza, con qualsiasi tipo di visibilità (private, protected, public).
+						- Parola chiave: Utilizza la parola chiave abstract per dichiarare la classe.
+					Quando Usarla:
+						- Quando si vuole fornire una classe base con una implementazione parziale che può essere condivisa da più sottoclassi.
+						- Quando si vogliono definire stati comuni (variabili di istanza) e comportamenti comuni (metodi concreti) che tutte le sottoclassi devono ereditare.
+				Interfacce
+					Peculiarità:
+						- Ereditarietà Multipla: Una classe può implementare più interfacce.
+						- Solo Metodi Abstract (prima di Java 8): Prima di Java 8, conteneva solo metodi abstract (senza corpo). Da Java 8, può contenere anche metodi default (con corpo) e metodi statici.
+						- Nessun Costruttore: Non può avere costruttori.
+						- Solo Costanti: Può avere solo variabili statiche e finali, che sono implicitamente public static final.
+						- Parola chiave: Utilizza la parola chiave interface per dichiarare l'interfaccia.
+					Quando Usarla:
+						- Quando si vuole definire un contratto senza preoccuparsi di come sarà implementato.
+						- Quando si ha bisogno di un tipo che può essere implementato da qualsiasi classe, anche se queste classi non sono collegate da un vincolo di ereditarietà.
+						- Quando si vuole sfruttare l'ereditarietà multipla per i metodi (Java non supporta l'ereditarietà multipla di classi).
+				Differenze Principali
+					Ereditarietà:						
+						- Classe Astratta: Può essere estesa da una sola classe.
+						 Interfaccia: Può essere implementata da qualsiasi numero di classi e una classe può implementare più interfacce.
+					Metodi:						
+						- Classe Astratta: Può avere sia metodi astratti che concreti.
+						- Interfaccia: Prima di Java 8, poteva avere solo metodi astratti. Da Java 8, può avere metodi default e statici.
+					Variabili di Istanza:						
+						-Classe Astratta: Può avere variabili di istanza.
+						-Interfaccia: Può avere solo variabili statiche e finali (costanti).
+					Costruttori:							
+						- Classe Astratta: Può avere costruttori.
+						- Interfaccia: Non può avere costruttori.
+					Utilizzo:	
+						- Classe Astratta: Utilizzata per condividere codice comune tra classi correlate.
+						- Interfaccia: Utilizzata per definire un contratto che può essere implementato da classi non correlate.
 
 [] Q11. Eccezioni in Java: cosa sono, come si gestiscono e come si lanciano
 
