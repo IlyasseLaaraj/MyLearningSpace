@@ -1,0 +1,174 @@
+SECTION : Java Base.
+[x] Q1. Cos'è JAVA, differenze tra JRE e JDK, JAVA linguaggio compilato ?		
+			- Java è un linguaggio di programmazione sviluppato da Sun Microsystems nel 1995, ora di proprietà di Oracle. È noto per il principio "write once, run anywhere" (WORA).
+			- Differenze tra JRE e JDK :
+				_ JRE (Java Runtime Environment):
+					Descrizione: Ambiente di runtime per eseguire applicazioni Java.
+					Contenuto: Include la JVM e le librerie di classe necessarie per l'esecuzione.
+					Scopo: Usato per eseguire programmi Java.
+				_ JDK (Java Development Kit):
+					Descrizione: Pacchetto completo per sviluppatori.
+					Contenuto: Include il JRE, il compilatore javac, debugger e altri strumenti di sviluppo.
+					Scopo: Usato per sviluppare, compilare e debuggare programmi Java.
+			- Java è un linguaggio compilato?
+				Java è sia compilato che interpretato:
+					_ Compilazione:
+						Il codice sorgente Java (.java) viene compilato in bytecode (.class) dal compilatore javac.
+					_ Interpretazione:
+						Il bytecode viene eseguito dalla JVM, che lo interpreta e lo traduce in istruzioni eseguibili dal sistema operativo.
+					Questo processo bifase di compilazione e interpretazione rende Java portabile e indipendente dalla piattaforma.
+
+[x] Q2. Dati primitivi, default dei dati primitivi (incaso non si assegni un valore)	
+		Dati Primitivi in Java sono gli elementi di base con cui si costruiscono le variabili e le strutture dati più complesse. Ci sono otto tipi di dati primitivi in Java:
+			byte: 8-bit, intero
+			short: 16-bit, intero
+			int: 32-bit, intero
+			long: 64-bit, intero
+			float: 32-bit, virgola mobile
+			double: 64-bit, virgola mobile
+			char: 16-bit, carattere Unicode
+			boolean: true o false
+		Valori di Default dei Dati Primitivi
+		Quando i dati primitivi vengono dichiarati ma non inizializzati, assumono un valore di default. Ecco i valori di default per ciascun tipo di dato primitivo:	
+		byte: 0
+		short: 0
+		int: 0
+		long: 0L
+		float: 0.0f
+		double: 0.0d
+		char: '\u0000' (il carattere null)
+		boolean: false	
+					
+[x] Q3. Gestire il flusso di controllo dell'applicazione: IF e SWITCH case	
+			In Java, il flusso di controllo dell'applicazione può essere gestito utilizzando varie strutture di controllo. Le due principali strutture di controllo condizionale sono if-else e switch-case.
+				Struttura if-else
+					La struttura if-else viene utilizzata per eseguire un blocco di codice se una condizione è vera. Se la condizione è falsa, può eseguire un altro blocco di codice opzionale.
+					e viene utilizzata quando si ha bisogno di valutare condizioni booleane complesse o multiple.
+				Struttura switch-case
+					La struttura switch-case viene utilizzata per selezionare uno tra diversi blocchi di codice da eseguire, in base al valore di una variabile. È spesso utilizzata come alternativa a una serie di istruzioni if-else quando si lavora con una singola variabile che può assumere molti valori.
+					preferibile quando si confronta una variabile contro molti valori costanti, come nel caso degli enumeratori o dei numeri interi.
+
+[x] Q4. Iterazione in JAVA: for, while e for generico(for each)
+			In Java, ci sono diversi costrutti per iterare su una sequenza di elementi o per ripetere un blocco di codice. I principali costrutti di iterazione sono for, while, e for-each.
+				- Ciclo for :
+					Il ciclo for è utile quando si conosce il numero esatto di iterazioni che si desidera eseguire. La sintassi del ciclo for include un'inizializzazione, una condizione di terminazione e un'operazione di aggiornamento.
+				- Ciclo while
+				    Il ciclo while è utile quando si desidera ripetere un blocco di codice fintanto che una condizione è vera. La condizione viene valutata all'inizio di ogni iterazione.
+				- Ciclo do-while
+					Il ciclo do-while è simile al ciclo while, ma garantisce che il blocco di codice venga eseguito almeno una volta, poiché la condizione viene valutata dopo l'esecuzione del blocco di codice.
+				- Ciclo for-each
+					Il ciclo for-each è specificamente progettato per iterare su collezioni e array. È semplice e riduce il rischio di errori di indice.
+
+[x] Q5. Paradigma Object Oriented, cos'è un oggetto e cos'è una classe
+			Il paradigma Object Oriented (orientato agli oggetti) è un modello di programmazione che organizza il software attorno a "oggetti" piuttosto che a funzioni e logica. Un oggetto è una rappresentazione di un'entità del mondo reale che contiene dati (attributi) e comportamenti (metodi)
+				- Una classe è un modello o uno schema che definisce le caratteristiche e i comportamenti comuni a un gruppo di oggetti. In altre parole, una classe è una struttura di dati che permette di creare oggetti.
+					+ Caratteristiche principali di una classe:
+						_ Attributi: Variabili che rappresentano lo stato di un oggetto.
+						_ Metodi: Funzioni che definiscono il comportamento di un oggetto.
+						_ Costruttori: Metodi speciali utilizzati per creare e inizializzare oggetti di quella classe.
+				- Un oggetto è un'istanza di una classe. È una rappresentazione concreta e specifica di una classe, che contiene valori reali per gli attributi definiti nella classe.				
+					+ Caratteristiche principali di un oggetto:
+						_ Stato: Valori specifici degli attributi.
+						_ Comportamento: Azioni o metodi che l'oggetto può eseguire.
+						_ Identità: Riferimento univoco dell'oggetto in memoria.
+		Quindi per concludere :
+			- una classe è un modello, un blueprint da cui gli oggetti vengono creati.
+			- un oggetto è un'istanza di una classe, contenente dati specifici.			
+								
+[x] Q6. Ereditarietà in java, possibile ereditarietà multipla?
+			- L'ereditarietà è un principio fondamentale della programmazione orientata agli oggetti che permette a una classe (chiamata classe derivata o sottoclasse) di ereditare campi e metodi da un'altra classe (chiamata classe base o superclasse). In Java, l'ereditarietà permette di riutilizzare il codice e di creare gerarchie di classi.
+			- Java non supporta l'ereditarietà multipla diretta delle classi,
+
+[x] Q7. Polimorfismo in java, differenza tra override e overload
+			Il polimorfismo è uno dei concetti fondamentali della programmazione orientata agli oggetti, e può essere ottenuto principalmente tramite l'override e l'overload dei metodi.
+				-Differenza tra Override e Overload
+					_ Override dei Metodi
+						-- L'override (sovrascrittura) dei metodi permette a una sottoclasse di fornire una specifica implementazione di un metodo già definito nella sua superclasse. La nuova implementazione nella sottoclasse sostituisce quella della superclasse.	
+							__ Caratteristiche dell'Override:
+								* Stessa firma: Il metodo nella sottoclasse deve avere la stessa firma (nome, tipo di ritorno e parametri) del metodo nella superclasse.
+								* Accessibilità: Il metodo sovrascritto nella sottoclasse deve avere lo stesso livello di accesso o più permissivo rispetto al metodo nella superclasse.
+								* Annotazione @Override: È buona pratica usare l'annotazione @Override per indicare che un metodo sta sovrascrivendo un metodo della superclasse.
+
+					_ Overload dei Metodi
+						-- L'overload (sovraccarico) dei metodi permette a una classe di avere più metodi con lo stesso nome ma con parametri diversi. I metodi sovraccaricati devono differire per il numero o il tipo dei parametri.
+							__ Caratteristiche dell'Overload:
+								* Stesso nome: I metodi devono avere lo stesso nome.
+								* Diversi parametri: I metodi devono differire per tipo e/o numero di parametri.
+								* Tipo di ritorno: I metodi possono avere lo stesso o diverso tipo di ritorno, ma questo non è sufficiente per distinguere i metodi sovraccaricati.
+
+[] Q8. Inclapsulamento in java, cos'è? IL Bean java. Caratteristiche strutturali del bean
+			L'incapsulamento è uno dei principi fondamentali della programmazione orientata agli oggetti (OOP) che consiste nel nascondere i dettagli interni di un oggetto e esporre solo ciò che è necessario per l'uso esterno. Questo principio promuove la modularità e la sicurezza del codice, permettendo di controllare l'accesso ai dati e ai metodi.
+				Caratteristiche dell'Incapsulamento
+					+ Nascondere i Dati: Gli attributi di una classe sono generalmente dichiarati come private, impedendo l'accesso diretto dall'esterno.
+					+ Accesso Controllato: L'accesso agli attributi privati avviene tramite metodi pubblici getter e setter.
+					+ Modularità: Le classi possono essere modificate internamente senza influenzare il codice esterno che le utilizza.
+					+ Sicurezza: Controllando l'accesso ai dati, si evita che i valori degli attributi vengano modificati in modi non desiderati.
+			
+			Un JavaBean è una classe Java che segue specifiche convenzioni di scrittura che permettono di creare oggetti riutilizzabili e interoperabili. I JavaBean sono ampiamente utilizzati nelle applicazioni Java, in particolare nelle applicazioni Java EE e nelle librerie di componenti come JavaServer Pages (JSP) e JavaServer Faces (JSF).
+				Caratteristiche Strutturali di un JavaBean
+					+ Costruttore senza Argomenti: Un JavaBean deve avere un costruttore pubblico senza argomenti.
+					+ Proprietà Accessibili: Le proprietà del JavaBean devono essere private e accessibili tramite metodi pubblici getter e setter.
+					+ Serializzabile: Un JavaBean deve implementare l'interfaccia java.io.Serializable, permettendo così la persistenza e la trasmissione degli oggetti.
+
+[] Q9. Visibilità in JAVA, public, private, protected in cosa consistono? Scope variabili in java
+			In Java, la visibilità dei membri di una classe (campi, metodi, costruttori) è regolata tramite i modificatori di accesso. Questi modificatori determinano da dove e come i membri possono essere accessibili all'interno e all'esterno della classe stessa. I principali modificatori di accesso sono public, private, protected e default (nessun modificatore specificato).
+				* Modificatori di Accesso in Java
+					. public
+						- Accessibile da: Tutti i pacchetti.
+						- Ereditato dalle sottoclassi: Sì.
+						- Utilizzo: Quando si desidera che il membro sia accessibile globalmente da qualsiasi punto del codice.
+						
+					. private
+						- Accessibile da: Solo dalla stessa classe.
+						- Ereditato dalle sottoclassi: No.
+						- Utilizzo: Per nascondere l'implementazione interna di una classe e garantire l'incapsulamento.
+						
+					. protected
+						- Accessibile da: La stessa classe, le sottoclassi (anche se si trovano in un pacchetto diverso) e tutte le classi dello stesso pacchetto.
+						- Ereditato dalle sottoclassi: Sì.
+						- Utilizzo: Utilizzato quando si desidera che il membro sia accessibile alle sottoclassi e alle classi nello stesso pacchetto.
+					. Nessun Modificatore (Default Package-Private)
+						- Accessibile da: Solo dalle classi nello stesso pacchetto.
+						- Ereditato dalle sottoclassi: Sì, se sono nello stesso pacchetto.
+						- Utilizzo: Implicitamente assegnato se nessun altro modificatore è specificato. Utilizzato per il controllo dell'accesso all'interno dello stesso pacchetto.
+				* Scope delle Variabili in Java
+					_ Le variabili locali all'interno di metodi, costruttori o blocchi possono essere definite con qualsiasi modificatore di accesso. Tuttavia, non hanno alcun effetto sulla visibilità al di fuori del blocco in cui sono dichiarate. Le variabili locali hanno uno scope limitato al blocco in cui sono definite e non possono essere accessibili al di fuori di esso.
+						- public: Accessibile globalmente.
+						- private: Accessibile solo internamente alla classe.
+						- protected: Accessibile alle sottoclassi e al pacchetto.
+						- Nessun modificatore (default): Accessibile solo al pacchetto.
+						
+[] Q10. Classi Astratte e Interfacce, pecuiliarità e differenze
+
+[] Q11. Eccezioni in Java: cosa sono, come si gestiscono e come si lanciano
+
+[] Q12. Eccezioni in Java: finally, try-with-resources
+
+[] Q13. Gestione List e Set: differenza tra le due
+
+[] Q14. Map e HahMap: loro utilizzo e gestione di esse
+
+[] Q15. Iterator, Comparable, Comparator, Serializable - A cosa servono queste interfacce ?
+
+[] Q16. Classe Object - che metodi ereditano tutte le classi? E come funzionano?
+
+[] Q17. Generics in JAVA - Cosa sono e in che modo aumentano l'astrazione?
+
+[] Q18. Static; Metodi e attributi, Il significato degli oggetti Static
+
+[] Q19. Immutabilità delle stringhe: String - StringBuilder - StringBuffer - StringJoiner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
